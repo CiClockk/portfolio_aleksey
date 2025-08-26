@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход | Этнофит</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="/" class="logo-link">
+            <img class="logo" src="../../images/logo.png" alt="Логотип">
+        </a>
+        <nav>
+        <a href="index.html#about">О проекте</a>
+        <a href="index.html#subscription">О подписке</a>
+        <a href="index.html#calculator">Калькулятор</a>
+        <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="auth-section">
+        <div class="auth-box">
+            <div class="auth-tabs">
+            <button class="auth-tab auth-active" onclick="switchTab('login')">Вход</button>
+            <button class="auth-tab" onclick="switchTab('register')">Регистрация</button>
+            </div>
+
+            <form action="../script/script.php" method="post" id="auth-login" class="auth-form auth-active">
+            <input name="stud_log" type="text" placeholder="Имя пользователя" required />
+            <input name="stud_pass" type="password" placeholder="Пароль" required />
+            <button type="submit" disabled>Войти</button>
+            <a href="#" class="auth-forgot">Я забыл пароль</a>
+            </form>
+
+            <form action="../script_new/script.php" method="post" id="auth-register" class="auth-form">
+            <input name="stud_log_new" type="text" placeholder="Имя пользователя" required />
+            <input name="stud_email" type="email" placeholder="Email" required />
+            <input name="stud_pass_new" type="password" placeholder="Пароль" required />
+            <button type="submit" disabled>Зарегистрироваться</button>
+            </form>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 Этнофит. Все права защищены.
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+        const tabs = document.querySelectorAll('.auth-tab');
+        const forms = document.querySelectorAll('.auth-form');
+        tabs.forEach(tabEl => tabEl.classList.remove('auth-active'));
+        forms.forEach(form => form.classList.remove('auth-active'));
+
+        if (tab === 'login') {
+            tabs[0].classList.add('auth-active');
+            document.getElementById('auth-login').classList.add('auth-active');
+        } else {
+            tabs[1].classList.add('auth-active');
+            document.getElementById('auth-register').classList.add('auth-active');
+        }
+        }
+
+        const loginForm = document.getElementById('auth-login');
+        const loginInputs = loginForm.querySelectorAll('input');
+        const loginBtn = loginForm.querySelector('button');
+
+        loginInputs.forEach(input => {
+        input.addEventListener('input', () => {
+            const filled = [...loginInputs].every(i => i.value.trim() !== '');
+            loginBtn.disabled = !filled;
+        });
+        });
+
+        
+        const registerForm = document.getElementById('auth-register');
+        const registerInputs = registerForm.querySelectorAll('input');
+        const registerBtn = registerForm.querySelector('button');
+
+        registerInputs.forEach(input => {
+            input.addEventListener('input', () => {
+                const filled = [...registerInputs].every(i => i.value.trim() !== '');
+                registerBtn.disabled = !filled;
+            });
+        });
+
+    </script>
+</body>
+</html>

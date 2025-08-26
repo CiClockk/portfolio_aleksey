@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  html, body{
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #2e2e2e;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(280deg, #0ca013 65%,rgba(255, 255, 255) 100%);
+    padding: 0 20px; 
+    display: flex;
+    justify-content: center; 
+    width: 97.4%;
+    position: fixed;
+    align-items: center;
+    z-index: 999;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+    min-height: 95px; 
+    max-height: 95px;
+  }
+
+  header nav{
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #2e2e2e;
+    font-weight: 600;
+  }
+  
+  .container {
+    margin-top: 100px !important;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .description {
+    font-size: 16px;
+  }
+  
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .feature-box {
+    flex: 1;
+    min-width: 280px;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  
+  .calculator {
+    background-color: #f0fce5;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .calculator label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .calculator input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .calculate-btn {
+    display: inline-block;
+    background-color: #bdf172;
+    color: #2e2e2e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .calculate-btn:hover {
+    background-color: #a4da5d;
+  }
+  .result {
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  
+  .reviews, .contacts {
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  footer {
+    background-color: #333333;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #ffffff;
+  }
+
+
+  .logo {
+    height: 125px;
+    width: auto;
+    object-fit: contain;
+    left: 20px; 
+  }
+
+  
+  .auth-section {
+    background-color: #f0fce5;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .auth-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .auth-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .auth-tab {
+    flex: 1;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #f4f4f4;
+    border: none;
+    transition: background 0.2s;
+    color: #666;
+  }
+  
+  .auth-tab.auth-active {
+    background: #bdf172;
+    color: #2f3d35;
+    border-radius: 6px;
+  }
+  
+  .auth-form {
+    display: none;
+    flex-direction: column;
+  }
+  
+  .auth-form.auth-active {
+    display: flex;
+  }
+  
+  .auth-form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .auth-form button {
+    padding: 12px;
+    background-color: #ccc;
+    color: #2f3d35;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: not-allowed;
+    font-size: 16px;
+  }
+  
+  .auth-form button:enabled {
+    background-color: #bdf172;
+    cursor: pointer;
+  }
+  
+  .auth-forgot {
+    margin-top: 12px;
+    color: #3478f6;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+  }
