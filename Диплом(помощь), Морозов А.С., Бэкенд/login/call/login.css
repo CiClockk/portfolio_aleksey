@@ -1,0 +1,293 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+.main-content {
+    flex: 1 0 auto; /* Контент растягивается */
+}
+
+.footer {
+    flex-shrink: 0; /* Футер не сжимается */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: translateY(-5px);
+}
+
+.slogan {
+    font-size: 14px;
+    color: #AFACC9;
+    line-height: 1.2;
+}
+
+.socials img {
+    width: 36px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+    transform: translateY(-5px);
+}
+
+.auth {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-overlay {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-overlay:hover {
+    transform: translateY(-5px);
+}
+
+.btn-overlay img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.btn-text.light {
+    color: #840404;
+}
+
+.btn-text.dark {
+    color: #ffffff;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
+    gap: 100px;
+}
+
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #8682A7;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+    transform: translateY(-5px);
+    color: #4c4671;
+}
+
+/* =================== АВТОРИЗАЦИЯ ==================== */
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Убедись, что контейнер растягивается по высоте */
+    background-color: #f4f2ff;
+}
+
+.auth-section {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+
+}
+
+.auth-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.auth-tab {
+    flex: 1;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #f4f4f4;
+    border: none;
+    transition: background 0.2s;
+    color: #666666;
+}
+
+.auth-tab.auth-active {
+    background: #840404;
+    color: #ffffff; /* Белый текст */
+}
+
+.auth-form {
+    display: none;
+    flex-direction: column;
+}
+
+.auth-form.auth-active {
+    display: flex;
+}
+
+.auth-form input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.auth-form button {
+    padding: 12px;
+    background-color: #cccccc;
+    color: #2f3d35;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: not-allowed;
+    font-size: 16px;
+}
+
+.auth-form button:enabled {
+    background-color: #840404;
+    color: #ffffff; /* Белый текст */
+    cursor: pointer;
+}
+
+.auth-forgot {
+    margin-top: 12px;
+    color: #3478f6;
+    text-align: center;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* =================== ФУТЕР ==================== */
+
+.footer {
+    background-color: #6b6590;
+    padding: 30px 20px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-email {
+    font-weight: 600;
+}
+
+.email-icon {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: translateY(-5px);
+}
