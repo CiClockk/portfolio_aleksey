@@ -1,0 +1,290 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    min-height: 100vh; /* ДОБАВЛЕНО */
+}
+
+.main-content {
+    flex: 1 0 auto;
+    min-height: 100vh; /* ДОБАВЛЕНО */
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    flex-shrink: 0; /* Футер не сжимается */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: translateY(-5px);
+}
+
+.slogan {
+    font-size: 14px;
+    color: #AFACC9;
+    line-height: 1.2;
+}
+
+.socials img {
+    width: 36px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+    transform: translateY(-5px);
+}
+
+.auth {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-overlay {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-overlay:hover {
+    transform: translateY(-5px);
+}
+
+.btn-overlay img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.btn-text.light {
+    color: #840404;
+}
+
+.btn-text.dark {
+    color: #ffffff;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
+    gap: 100px;
+}
+
+.nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #8682A7;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+    transform: translateY(-5px);
+    color: #4c4671;
+}
+
+/* ========== Основной раздел ========== */
+.student-dashboard {
+    padding: 40px 20px;
+    background: #f4f2ff; /* Фон страницы */
+    color: #333;
+    font-family: 'Nunito', sans-serif;
+    height: calc(100vh - 80px); /* Высота секции с учетом отступов */
+}
+
+.container {
+    max-width: 1200px; /* Ограничиваем ширину контейнера */
+    margin: 0 auto; /* Центрируем */
+}
+
+.alert-box {
+    background-color: rgba(132, 4, 4, 0.08); /* Прозрачный бордовый */
+    border-left: 6px solid #840404; /* Бордовый цвет */
+    padding: 16px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.alert-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #840404; /* Текст бордового цвета */
+}
+
+.btn-access {
+    padding: 8px 16px;
+    background-color: #840404; /* Бордовый */
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-access:hover {
+    background-color: #5e0202; /* Темнее при наведении */
+}
+
+/* ========== Информация об ученике ========== */
+.student-info {
+    background: none; /* Без фона */
+    padding: 32px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: none; /* Без тени */
+}
+
+.student-info h1 {
+    margin: 0 0 12px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #4c4671;
+}
+
+.student-info p {
+    font-size: 16px;
+    margin: 6px 0;
+    color: #666;
+}
+
+.change-program {
+    margin-top: 12px;
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #840404; /* Бордовый */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.change-program:hover {
+    background-color: #5e0202;
+}
+
+.credentials {
+    margin: 20px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+
+/* =================== ФУТЕР ==================== */
+
+.footer {
+    background-color: #6b6590;
+    padding: 30px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    flex-shrink: 0;
+    margin-top: auto; /* ДОБАВЛЕНО, чтобы футер опускался вниз */
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-left p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-email {
+    font-weight: 600;
+}
+
+.email-icon {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.footer-right {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover img {
+    transform: translateY(-5px);
+}

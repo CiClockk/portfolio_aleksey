@@ -1,0 +1,866 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    color: #333;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo img:hover {
+    transform: translateY(-5px);
+  }
+
+  .slogan {
+    font-size: 14px;
+    color: #AFACC9;
+    line-height: 1.2;
+  }
+  
+  .socials img {
+    width: 36px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .socials img:hover {
+    transform: translateY(-5px);
+  }
+  .auth {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn-overlay {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-overlay:hover {
+    transform: translateY(-5px);
+  }
+  
+  .btn-overlay img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .btn-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    pointer-events: none;
+  }
+  
+  .btn-text.light {
+    color: #840404;
+  }
+  
+  .btn-text.dark {
+    color: white;
+  }
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0;
+    gap: 100px;
+  }
+  
+  .nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #8682A7;
+    font-weight: 500;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav a:hover {
+    transform: translateY(-5px);
+    color: #4c4671;
+  }
+  
+/*=====================================================================================================================================================================================================================================================*/
+
+  .hero {
+    background: #f4f2ff;
+    padding: 60px 20px;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .hero .text {
+    max-width: 600px;
+  }
+  
+  .hero h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    color: #8682A7;
+  }
+  
+  .form-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0; /* оставим ноль, чтобы фоны стояли вплотную */
+  }
+  
+  /* ОТДЕЛЬНО: Блок input */
+  .input-box {
+    position: relative;
+    margin-right: -20px; /* регулируешь наезд кнопки */
+  }
+  
+  .input-box img {
+    display: flex;
+  }
+  
+  /* Сам input — можно двигать вверх/вниз и подгонять ширину */
+  .input-box input {
+    position: absolute;
+    top: 50%;         /* центр по вертикали */
+    left: 50%;        /* центр по горизонтали */
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    width: 77%;        /* можешь увеличить или уменьшить */
+    height: auto;      /* можно задать точно, если нужно */
+    padding: 0;        /* убираем всё лишнее */
+    margin-left: -6%;
+  }
+  
+  /* ОТДЕЛЬНО: Блок кнопки */
+  .button-box {
+    position: relative;
+    z-index: 1; /* если надо быть поверх */
+  }
+  
+  .button-box img {
+    display: flex;
+    margin-left: -20%;
+  }
+  
+  /* Кнопка: подвигаешь здесь */
+  .button-box button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    width: 90%;
+    text-align: center;
+    margin-left: -20%;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .button-box button:hover {
+    transform: translate(-50%, calc(-50% - 5px));
+    color: #FFD4D4; /* можешь поменять на свой цвет при наведении */
+  }
+
+  .input-box,
+.button-box {
+  position: relative;
+  transform: translateY(80%); /* сдвигает весь блок вниз */
+}
+  
+  .mascot-wrapper {
+    position: relative;
+    width: fit-content;
+    max-width: 600px;
+  }
+  
+  .figures {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin-top: 25%;
+  }
+  
+  .mascot {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .figures img,
+  .mascot img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .features {
+    background: #f4f2ff;
+    padding: 40px 20px;
+  }
+  
+  .features-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .feature {
+    background: #f9f9ff;
+    border-radius: 20px;
+    padding: 20px;
+    flex: 1 1 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+  
+    /* вот это для горизонтального расположения */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* расстояние между иконкой и текстом */
+  }
+  
+  .feature:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature img {
+    width: 40px;
+    flex-shrink: 0; /* не сжимается */
+  }
+  
+  .feature p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+  }
+
+  /*=====================================================================================================================================================================================================================*/
+
+  .welcome {
+    padding: 60px 20px;
+    background-color: #f4f2ff;
+  }
+  
+  .welcome h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: #2D2D2D;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    margin: 60px auto 60px;
+    width: 100%;
+    display: block;
+    margin-bottom: 6%;
+  }
+  
+  
+  .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .olenenok2 {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  .olenenok2,
+  .text-side {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .figure-wrapper2 {
+    position: relative;
+    width: 100%;
+  }
+  
+  .figure-wrapper2 .figures2 {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 24px;
+  }
+  
+  .figure-wrapper2 .mascot2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .figure-wrapper2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .text-side {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+  
+  .intro, .final {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2D2D2D;
+    line-height: 1.6;
+  }
+  
+  .final {
+    font-weight: 600;
+    color: #2D2D2D;
+    margin-top: 20px;
+  }
+  
+  .intro{
+    margin-top: -2%;
+  }
+
+  .card1, .card2 {
+    display: flex;
+    gap: 16px; /* Расстояние между карточками */
+    flex-wrap: wrap; /* Позволяет карточкам переноситься на новую строку, если не помещаются */
+  }
+  
+  .card1 {
+    margin-top: -120px;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    background: #fff;
+    border-radius: 16px;
+    padding: 16px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #6D698C;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    width: 43%;
+    box-sizing: border-box;
+    min-height: 100px;
+    z-index: 3;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    line-height: 1.6;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    color: #4c4671;
+  }
+
+  /*===========================================================================================================================================================================================*/
+
+/* Ссылка-обёртка */
+a.topic1 {
+  text-decoration: none; /* убираем подчёркивание */
+  color: inherit;         /* сохраняем текущий цвет текста */
+}
+
+/* Убираем фокусную рамку при клике и подчёркивание при наведении */
+a.topic1:focus,
+a.topic1:hover,
+a.topic1:visited,
+a.topic1:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+  .topics {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f2ff;
+  }
+  
+  .topics h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 50px;
+  }
+  
+  .text-topic {
+    font-size: 18px;
+    color: #8682A7;
+    margin-bottom: 40px;
+  }
+  
+  /* Контейнер карточек */
+  .cardview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрируем содержимое */
+  }
+  
+  /* Карточка */
+  .topic1 {
+    width: 360px; /* Ширина карточки */
+    padding: 16px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Меняем на column, чтобы текст был под картинкой */
+    align-items: center; /* Выравниваем элементы по центру */
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    height: auto;
+  }
+  
+  .topic1:hover {
+    transform: translateY(-6px); /* Анимация при наведении */
+  }
+  
+  .topic1 img {
+    width: 100%; /* Картинка теперь будет на всю ширину карточки */
+    height: auto; /* Сохраняем пропорции картинки */
+    margin-bottom: 16px; /* Отступ между картинкой и текстом */
+  }
+  
+  /* Обертываем текст в отдельный контейнер */
+  .text-wrapper {
+    display: flex;
+    justify-content: center; /* Выравниваем текст по центру */
+    align-items: flex-start; /* Выравниваем по верхнему краю */
+    width: 100%; /* Устанавливаем полную ширину для текстового блока */
+  }
+  
+  .text-wrapper p {
+    font-size: 24px;
+    font-weight: 600;
+    color: #6D698C;
+    margin: 0;
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  .temolen{
+    min-height: 520px;
+  }
+
+  /*========================================================================================================================================================================================================*/
+
+  .advantages {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f2ff;
+  }
+  
+  .advantages > h1 {
+    font-size: 46px;
+    font-weight: 800;
+    color: #333;
+    margin: 0 auto 60px; /* центрирование + отступ снизу */
+    width: 70%;
+    text-align: center;
+  }
+  
+  .advcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .advcard {
+    width: calc(50% - 16px);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+    text-align: left;
+  }
+  
+  .advcard:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Заголовок и картинка в одной строке */
+  .advcard-header {
+    display: flex;
+    align-items: flex-start; /* чтобы заголовок был сверху */
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .advcard img {
+    width: 80px;
+    height: auto;
+    margin-right: 40px;
+    margin-top: 20px; /* опустить картинку */
+    margin-left: 20px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+  
+  .advcard h1 {
+    font-size: 30px; /* увеличили размер */
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+    word-break: break-word; /* если заголовок длинный */
+    margin-top: 18px;
+  }
+  
+  /* Текст под заголовком */
+  .advcard p {
+    font-size: 18px;
+    color: #8682A7;
+    line-height: 1.6;
+    margin: 0;
+    width: 85%;
+    margin-left: 20px;
+    margin-right: 30px;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .advcard {
+      width: 100%;
+    }
+  }
+
+  /*=================================================================================================================================================================================*/
+
+  .audio-reviews {
+    background-color: #f4f2ff;
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .audio-reviews h2 {
+    font-size: 46px;
+    font-weight: 800;
+    width: 75%;
+    margin: 0 auto 60px;
+    line-height: 1.4;
+  }
+  
+  .audio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .audio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .audio-text {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .audio-player {
+    background-color: #d0efdf;
+    border-radius: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    max-width: 90%;
+    justify-content: space-between;
+    height: 50px;
+  }
+  
+  .play-wrapper {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  
+  .play-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  
+  .play-button {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 2px); /* Сместили на 5px вправо */
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    font-size: 16px; /* Сделал поменьше, было 24px */
+    color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease; /* Плавный переход для подпрыгивания */
+  }
+  .play-button:hover {
+    transform: translate(-50%, -50%) translateY(-5px); /* Подпрыгивание */
+  }
+  
+  .progress-line {
+    flex: 1;
+    height: 2px;
+    background-color: #2ca370;
+    margin: 0 15px;
+  }
+  
+  .audio-time {
+    font-size: 14px;
+    color: #2ca370;
+  }
+
+/*==========================================================================================================================================================================================================*/
+
+  .subscription-block {
+    background-color: #840404; /* Бордовый фон */
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+  }
+  
+  .subscription-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;      /* <-- Центрируем по вертикали */
+    margin: 0 auto;           /* <-- Центрируем сам контейнер */
+    text-align: center;
+}
+
+.content {
+    max-width: 600px;
+}
+
+.subscription-block h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    text-align: left; /* На всякий случай — вдруг заголовок что-то переопределяет */
+}
+
+.content p{
+  font-weight: 600;
+  margin-top: 30px;
+}
+  
+  .highlight {
+    color: #ffcc33; /* Жёлтый цвет "Откройте мир" */
+  }
+  
+  .subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.button-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.subscribe-button {
+  position: relative;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 26px; /* Было 22px */
+  font-weight: 600; /* Чуть жирнее */
+  padding: 60px 120px; /* Было 15px 40px */
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease, color 0.3s ease; /* Добавил плавный переход */
+}
+
+.subscribe-button:hover {
+  transform: translateY(-5px); /* Подпрыгивание */
+  color: #4c4671; /* Новый цвет при наведении */
+}
+
+  .illustration {
+    position: relative;
+    width: 600px;
+    max-width: 100%;
+  }
+  
+  .figures3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+  }
+  
+  .olen {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /*==============================================================================================================================================================================================*/
+
+  .footer {
+    background-color: #6b6590; /* Твой фоновый цвет */
+    padding: 30px 20px;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-email {
+    font-weight: 600;
+  }
+  
+  .email-icon {
+    width: 20px;
+    margin-right: 8px;
+  }
+  
+  .footer-right {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Увеличил ширину */
+    height: 50px; /* Увеличил высоту */
+    border: none; /* Убрал рамку */
+    border-radius: 8px; /* Можно оставить для красоты */
+    transition: transform 0.3s ease; /* Плавный переход */
+}
+
+.social-icon img {
+    width: 48px; /* Увеличил сами SVG */
+    height: 48px;
+    transition: transform 0.3s ease; /* Плавная анимация для иконки */
+}
+
+.social-icon:hover img {
+    transform: translateY(-5px); /* Подпрыгивание */
+}
+
+/*==============================================================================================================================================================================================================================================================================================================================================================================================================================*/
+
